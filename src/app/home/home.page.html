@@ -1,20 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Taches
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary">
+        <ion-icon name="add"></ion-icon>Ajouter
+      </ion-button>
+      <ion-button color="danger">
+        <ion-icon name="backspace"></ion-icon>Annuler
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-list-header>
+      Mes Taches
+    </ion-list-header>
+    <ion-card class="task">
+      <ion-checkbox></ion-checkbox>
+      <ion-card-title>
+        <h4 class="task_title">Faire la vaisselle</h4>
+      </ion-card-title>
+      <ion-card-content>
+        <p>Il faut faire la vaisselle avant de partir</p>
+      </ion-card-content>
+      <ion-button fill="clear" color="danger" style="float: right;">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" color="dark" style="float: right;">
+        <ion-icon name="pencil-sharp"></ion-icon>
+      </ion-button>
+    </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+
+  </ion-list>
+
 </ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input placeholder="Ajouter une tache"></ion-input>
+    <ion-button shape="round" color="primary">
+      <ion-icon name="add"></ion-icon>Ajouter
+    </ion-button>
+
+
+  </ion-item>
+</ion-footer>
